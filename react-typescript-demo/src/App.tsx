@@ -6,6 +6,8 @@ import { PersonList } from "./components/PersonList";
 import { Status } from "./components/Status";
 import { Heading } from "./components/Heading";
 import { Oscar } from "./components/Oscar";
+import { Button } from "./components/eventInputProps/Button";
+import { Input } from "./components/eventInputProps/Input";
 
 function App() {
   const personName = {
@@ -38,6 +40,14 @@ function App() {
       <Oscar>
         <Heading>Oscar goes to Leonardo Dicpario!</Heading>
       </Oscar>
+
+      {/* eventProps */}
+
+      <Button
+        handleClick={(event, id) => console.log("Button Clicked", event, id)}
+      />
+
+      <Input value="" handleChange={(event) => console.log(event)} />
     </div>
   );
 }
