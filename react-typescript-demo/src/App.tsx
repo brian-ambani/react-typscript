@@ -8,6 +8,7 @@ import { Heading } from "./components/Heading";
 import { Oscar } from "./components/Oscar";
 import { Button } from "./components/eventInputProps/Button";
 import { Input } from "./components/eventInputProps/Input";
+import { Container } from "./components/Container";
 
 function App() {
   const personName = {
@@ -48,6 +49,15 @@ function App() {
       />
 
       <Input value="" handleChange={(event) => console.log(event)} />
+
+      {/* styles as props */}
+      <Container
+        styles={{
+          border: "1px solid black",
+          padding: "1rem",
+          backgroundColor: "whitesmoke",
+        }}
+      />
     </div>
   );
 }
