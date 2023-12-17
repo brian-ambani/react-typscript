@@ -10,6 +10,7 @@ import { Button } from "./components/proptypes/eventInputProps/Button";
 import { Input } from "./components/proptypes/eventInputProps/Input";
 import { Container } from "./components/proptypes/Container";
 import { LoggedIn } from "./components/state/LoggedIn";
+import { User } from "./components/state/User";
 
 function App() {
   const personName = {
@@ -60,6 +61,7 @@ function App() {
         }}
       />
       <LoggedIn />
+      <User />
     </div>
   );
 }
