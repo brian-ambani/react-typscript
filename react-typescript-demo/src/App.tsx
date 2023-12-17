@@ -1,14 +1,15 @@
 import React from "react";
 import "./App.css";
-import { Greet } from "./components/Greet";
-import { Person } from "./components/Person";
-import { PersonList } from "./components/PersonList";
-import { Status } from "./components/Status";
-import { Heading } from "./components/Heading";
-import { Oscar } from "./components/Oscar";
-import { Button } from "./components/eventInputProps/Button";
-import { Input } from "./components/eventInputProps/Input";
-import { Container } from "./components/Container";
+import { Greet } from "./components/proptypes/Greet";
+import { Person } from "./components/proptypes/Person";
+import { PersonList } from "./components/proptypes/PersonList";
+import { Status } from "./components/proptypes/Status";
+import { Heading } from "./components/proptypes/Heading";
+import { Oscar } from "./components/proptypes/Oscar";
+import { Button } from "./components/proptypes/eventInputProps/Button";
+import { Input } from "./components/proptypes/eventInputProps/Input";
+import { Container } from "./components/proptypes/Container";
+import { LoggedIn } from "./components/state/LoggedIn";
 
 function App() {
   const personName = {
@@ -58,6 +59,7 @@ function App() {
           backgroundColor: "whitesmoke",
         }}
       />
+      <LoggedIn />
     </div>
   );
 }
