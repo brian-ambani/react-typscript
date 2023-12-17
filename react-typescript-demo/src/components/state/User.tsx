@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "../proptypes/eventInputProps/Button";
 
 type AuthUser = {
   name: string;
@@ -7,7 +6,7 @@ type AuthUser = {
 };
 
 export const User = () => {
-  const [user, setUser] = useState<AuthUser | null>(null);
+  const [user, setUser] = useState<AuthUser>({} as AuthUser);
 
   const handleLogIn = () => {
     setUser({
@@ -15,15 +14,13 @@ export const User = () => {
       email: "bruce@wayne.com",
     });
   };
-  const handleLogOut = () => setUser(null);
 
   return (
     <div>
       <button onClick={handleLogIn}>Login</button>
-      <button onClick={handleLogOut}>Logout</button>
 
-      <div>User name:{user?.name}</div>
-      <div>User email:{user?.email}</div>
+      <div>User name:{user.name}</div>
+      <div>User email:{user.email}</div>
     </div>
   );
 };
